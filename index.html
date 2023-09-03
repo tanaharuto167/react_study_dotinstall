@@ -19,7 +19,9 @@
         console.log(props)
         return (
           <>
-            <li>牛丼1</li>
+            <button>-</button>
+            <button>+</button>
+            <li>{props.name}({props.price}円 * 0個)</li>
         </>
         );
       }
@@ -28,9 +30,9 @@
           <>
           <h1>メニュー</h1>
           <ul className="menus">
-            <Menu name="牛丼"/>
-            <Menu name="カレー"/>
-            <Menu name="サラダ"/>
+            <Menu name="牛丼" price="400"/>
+            <Menu name="カレー" price="300"/>
+            <Menu name="サラダ"  price="200"/>
           </ul>
           <p>合計: 0円</p>
         </>

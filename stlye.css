@@ -7,7 +7,7 @@ body {
 #container {
   width: 400px;
   margin: 0 auto;
-  background: pink;
+  background: skyblue;
 }
 h1 {
   margin: 0;
@@ -26,6 +26,11 @@ border: 1px solid #ccc;
 padding: 8px;
 border-radius: 8px;
 margin-top: 16px;
+}
+
+.menus button {
+    margin-right: 8px;
+    width: 24px;
 }
   
 p {
