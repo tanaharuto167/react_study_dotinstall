@@ -26,10 +26,24 @@
         );
       }
       const App = () => {
+        const menus = [
+          {name: '牛丼ネオ', price: 420},
+          {name: 'ネオサラダ', price: 920},
+          {name: 'カラーネオ', price: 1420},
+        ];
+        const menuItems = menus.map((menu) => {
+          return (
+            <Menu 
+              name={menu.name}
+              price={menu.price}
+            />
+          );
+        });
         return (
           <>
           <h1>メニュー</h1>
           <ul className="menus">
+            {menuItems}
             <Menu name="牛丼" price="400"/>
             <Menu name="カレー" price="300"/>
             <Menu name="サラダ"  price="200"/>
