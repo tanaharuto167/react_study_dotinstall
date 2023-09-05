@@ -16,12 +16,13 @@
     'user strict';
     {
       const Menu = (props) => {
+        const [count, setCount] = React.useState(0);
         console.log(props)
         return (
           <>
             <button>-</button>
             <button>+</button>
-            <li>{props.name}({props.price}円 * 0個)</li>
+            <li>{props.name}({props.price}円 * {count}個)</li>
         </>
         );
       }
