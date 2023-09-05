@@ -27,13 +27,14 @@
       }
       const App = () => {
         const menus = [
-          {name: '牛丼ネオ', price: 420},
-          {name: 'ネオサラダ', price: 920},
-          {name: 'カラーネオ', price: 1420},
+          {id: 0 ,name: '牛丼ネオ', price: 420},
+          {id: 1 ,name: 'ネオサラダ', price: 920},
+          {id: 2 ,name: 'カラーネオ', price: 1420},
         ];
         const menuItems = menus.map((menu) => {
           return (
             <Menu 
+              id={menu.id}
               name={menu.name}
               price={menu.price}
             />
