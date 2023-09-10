@@ -26,6 +26,8 @@
           // }
         };
         const increment = () => {
+          props.onIncreement();
+
           // setCount(count + 1);
           // setCount((prevCount) => { return prevCount + 1;});
           // setCount((prevCount) => { return prevCount + 1;});
@@ -48,7 +50,10 @@
         ];
         const decrementMenu = () => {
           console.log("minus button")
-        }
+        };
+        const incrementMenu = () => {
+          console.log("increament button")
+        };
         const total = (menus[0].price * counts[0]) + 
         (menus[1].price * counts[1]) + 
         (menus[2].price * counts[2])
@@ -60,6 +65,7 @@
               name={menu.name}
               price={menu.price}
               onDecrement={decrementMenu}
+              onIncreement={incrementMenu}
             />
           );
         });
