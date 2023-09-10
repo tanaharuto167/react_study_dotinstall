@@ -18,6 +18,9 @@
       const Menu = (props) => {
         // const [count, setCount] = React.useState(0);
         const decrement = () => {
+          // App componet Function
+          props.onDecrement();
+
           // if(count >0){
           //   setCount(count - 1);
           // }
@@ -26,7 +29,7 @@
           // setCount(count + 1);
           // setCount((prevCount) => { return prevCount + 1;});
           // setCount((prevCount) => { return prevCount + 1;});
-        };
+        };  
         console.log(props)
         return (
           <>
@@ -43,6 +46,9 @@
           {id: 1 ,name: 'ネオサラダ', price: 920},
           {id: 2 ,name: 'カラーネオ', price: 1420},
         ];
+        const decrementMenu = () => {
+          console.log("minus button")
+        }
         const total = (menus[0].price * counts[0]) + 
         (menus[1].price * counts[1]) + 
         (menus[2].price * counts[2])
@@ -53,6 +59,7 @@
               count={counts[menu.id]}
               name={menu.name}
               price={menu.price}
+              onDecrement={decrementMenu}
             />
           );
         });
