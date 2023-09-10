@@ -20,7 +20,6 @@
         const decrement = () => {
           // App componet Function
           props.onDecrement();
-
           // if(count >0){
           //   setCount(count - 1);
           // }
@@ -48,7 +47,10 @@
           {id: 1 ,name: 'ネオサラダ', price: 920},
           {id: 2 ,name: 'カラーネオ', price: 1420},
         ];
-        const decrementMenu = () => {
+        const decrementMenu = (menuId) => {
+          const newCount = [...counts];
+          newCount[menuId]--;
+          setCounts(newCount);
           console.log("minus button")
         };
         const incrementMenu = () => {
